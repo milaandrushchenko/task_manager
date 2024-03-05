@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsOptional } from 'class-validator'
+import { IsIn, IsNotEmpty, IsOptional, IsString } from 'class-validator'
 import { User } from 'src/user/entities/user.entity'
 
 export class CreateTaskDto {
@@ -8,12 +8,11 @@ export class CreateTaskDto {
   @IsNotEmpty()
   details: string
 
-  @IsOptional()
-  inProcess: Boolean
-
-  @IsOptional()
-  isCompleted: Boolean
-
   @IsNotEmpty()
-  user: User
+  @IsString()
+  @IsIn(['new', 'inProcess', 'isCompleted'])
+  status: 'new' | 'inProcess' | 'isCompleted' = 'new'
+
+  // @IsNotEmpty()
+  // user: User
 }

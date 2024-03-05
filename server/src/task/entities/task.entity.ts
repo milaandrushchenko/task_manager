@@ -20,11 +20,8 @@ export class Task {
   @Column()
   title: string
 
-  @Column()
-  inProcess: Boolean
-
-  @Column()
-  isCompleted: Boolean
+  @Column({ default: 'new' })
+  status: string
 
   @ManyToOne(() => User, (user) => user.tasks)
   @JoinColumn({ name: 'user_id' })
