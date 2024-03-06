@@ -82,7 +82,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import LayoutDiv from "../LayoutDiv.vue";
 
 export default defineComponent({
   name: "RegisterPage",
