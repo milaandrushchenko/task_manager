@@ -11,20 +11,13 @@
 </template>
 
 <script setup lang="ts">
-import TaskList from "../TasksList.vue";
-import DashboardPage from "./DashboardPage.vue";
-import TaskCreate from "../TaskCreate.vue";
+import TaskList from "../components/task/TasksList.vue";
+import DashboardPage from "../components/DashboardPage.vue";
+import TaskCreate from "../components/task/TaskCreate.vue";
 import { onMounted, ref } from "vue";
+import { Task } from "../utils/types";
+
 import axios from "axios";
-
-interface Task {
-  id: number;
-  title: string;
-  details: string;
-  status: string;
-  createdAt: Date;
-}
-
 const tasks = ref<Task[]>([]);
 
 const getAllTasks = async (): Promise<void> => {
@@ -42,4 +35,3 @@ onMounted(() => {
   getAllTasks();
 });
 </script>
-../TasksList.vue../TaskCreate.vue../TaskCreate.vue../TasksList.vue

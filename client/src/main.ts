@@ -2,10 +2,10 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import axios from "axios";
 import { createRouter, createWebHistory } from "vue-router";
-import LoginPage from "./components/pages/LoginPage.vue";
-import RegisterPage from "./components/pages/RegisterPage.vue";
-import DashboardPage from "./components/pages/DashboardPage.vue";
-import TasksPage from "./components/pages/TasksPage.vue";
+import LoginPage from "./pages/LoginPage.vue";
+import RegisterPage from "./pages/RegisterPage.vue";
+import DashboardPage from "./components/DashboardPage.vue";
+import TasksPage from "./pages/TasksPage.vue";
 import "./index.css";
 
 axios.defaults.baseURL = process.env.VUE_APP_API_URL;
