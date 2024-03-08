@@ -5,58 +5,29 @@
         <h5 class="text-xl font-bold mb-4">Register</h5>
         <form @submit.prevent="registerAction">
           <div class="mb-4">
-            <label
-              for="email"
-              class="block text-gray-700 text-sm font-bold mb-2"
-              >Email address</label
-            >
-            <input
-              v-model="email"
-              id="email"
-              name="email"
-              :class="{ 'border-red-500': emailError }"
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email address</label>
+            <input v-model="email" id="email" name="email" :class="{ 'border-red-500': emailError }"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              @focus="emailError = false"
-              required
-            />
+              @focus="emailError = false" required />
             <div v-if="emailError" class="text-red-500 text-xs italic">
               {{ validationErrors.email }}
             </div>
           </div>
           <div class="mb-4">
-            <label
-              for="password"
-              class="block text-gray-700 text-sm font-bold mb-2"
-              >Password</label
-            >
-            <input
-              v-model="password"
-              type="password"
-              id="password"
-              name="password"
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+            <input v-model="password" type="password" id="password" name="password"
               :class="{ 'border-red-500': passwordError }"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              @focus="passwordError = false"
-              required
-            />
+              @focus="passwordError = false" required />
             <div v-if="passwordError" class="text-red-500 text-xs italic">
               {{ validationErrors.password }}
             </div>
           </div>
           <div class="mb-4">
-            <label
-              for="confirm_password"
-              class="block text-gray-700 text-sm font-bold mb-2"
-              >Confirm Password</label
-            >
-            <input
-              v-model="confirmPassword"
-              type="password"
-              id="confirm_password"
-              name="confirm_password"
+            <label for="confirm_password" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+            <input v-model="confirmPassword" type="password" id="confirm_password" name="confirm_password"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
+              required />
             <div v-if="passwordMismatch" class="text-red-500 text-xs italic">
               Passwords do not match
             </div>
@@ -65,19 +36,15 @@
             {{ serverErrors }}
           </p>
           <div class="flex items-center justify-center">
-            <button
-              type="submit"
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
+            <button type="submit"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Register Now
             </button>
           </div>
           <div class="text-center mt-4">
             <p class="text-sm">
               Have already an account?
-              <router-link to="/" class="font-bold text-blue-500"
-                >Login here</router-link
-              >
+              <router-link to="/" class="font-bold text-blue-500">Login here</router-link>
             </p>
           </div>
         </form>

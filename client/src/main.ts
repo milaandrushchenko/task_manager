@@ -7,6 +7,7 @@ import RegisterPage from "./pages/RegisterPage.vue";
 import DashboardPage from "./components/DashboardPage.vue";
 import TasksPage from "./pages/TasksPage.vue";
 import "./index.css";
+import ProfilePage from "./pages/ProfilePage.vue";
 
 axios.defaults.baseURL = process.env.VUE_APP_API_URL;
 
@@ -16,6 +17,7 @@ const router = createRouter({
     { path: "/", component: LoginPage },
     { path: "/register", component: RegisterPage },
     { path: "/tasks", component: TasksPage },
+    { path: "/profile", component: ProfilePage },
     { path: "/dashboard", component: DashboardPage },
   ],
 });

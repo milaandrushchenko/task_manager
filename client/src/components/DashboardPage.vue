@@ -5,9 +5,10 @@
         <a class="text-xl font-bold" href="#">TASK MANAGER</a>
         <ul class="flex">
           <li class="ml-4">
-            <router-link to="/tasks" class="text-blue-600"
-              >My Tasks</router-link
-            >
+            <router-link to="/tasks" class="text-blue-600">My Tasks</router-link>
+          </li>
+          <li class="ml-4">
+            <router-link to="/profile" class="text-blue-600">Profile</router-link>
           </li>
           <li class="ml-4">
             <a @click="logoutAction" class="text-blue-600" href="#">Logout</a>
